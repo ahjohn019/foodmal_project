@@ -1,0 +1,42 @@
+.NavBar {
+  height: 80px;
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  transition: 0.3s ease-out;
+}
+
+.NavBar .NotificationIcons {
+  position: absolute;
+  background-color: red;
+  top: -15px;
+  right: -40%;
+  padding: 0 7px;
+  border-radius: 50%;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 1px;
+}
+
+.dropdown:hover .dropdown_content {
+  color: black;
+  display: block;
+}
+
+.dropdown_content p {
+  color: black;
+  padding: 16px 12px;
+}
+
+.dropdown_content p:hover {
+  background-color: lightgray;
+}

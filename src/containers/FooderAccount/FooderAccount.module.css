@@ -1,0 +1,129 @@
+.FooderAccountContent,
+.FooderForm_Group,
+.FooderAccountLogin,
+.Fooder_ProfileBar,
+.Fooder_Profile,
+.Fooder_AccountBlock {
+  display: flex;
+}
+
+.FooderAccountContent {
+  padding: 16px 14px;
+  flex: 1;
+  flex-direction: column;
+  margin: 5rem auto 0;
+  align-items: center;
+}
+
+.FooderAccountContent h2 {
+  text-align: center;
+  margin: 16px 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400px;
+}
+
+.FooderForm_Group {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.FooderForm_Field {
+  margin: 12px auto 10px auto;
+}
+
+.FooderAccountLogin {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Fooder_TextField {
+  width: 540px;
+}
+
+.Fooder_SidebarBody {
+  max-width: 60%;
+  margin: 100px auto 100px auto;
+}
+
+.Fooder_ProfileBar {
+  border: 1px solid lightgray;
+  padding: 5px 12px;
+  justify-content: center;
+}
+
+.Fooder_Profile {
+  margin: 5rem auto;
+  max-width: 80%;
+  flex-direction: row;
+}
+
+.Fooder_AvatarImg {
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+.Fooder_AccountBlock,
+.Fooder_ProfileOrderBlock {
+  border: 1px solid lightgray;
+  border-radius: 22px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 22px;
+}
+
+.Fooder_AccountBlock {
+  width: 350px;
+  height: 100%;
+  padding: 16px 14px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Fooder_ProfileOrderBlock {
+  width: 100%;
+  border: 1px solid lightgray;
+  margin: 0 30px;
+  text-align: center;
+}
+
+.Fooder_AccountBlock p {
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.Fooder_State {
+  color: lightcoral;
+  font-weight: 700;
+}
+
+/* Mobile One----------- */
+@media only screen and (max-width: 768px) {
+  .Fooder_TextField {
+    width: 240px;
+  }
+  .Fooder_AvatarProfile {
+    flex-direction: column;
+  }
+  .Fooder_SidebarBody {
+    max-width: 80%;
+  }
+  .Fooder_Profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .Fooder_AccountBlock {
+    width: 100%;
+    padding: 16px 14px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .Fooder_ProfileOrderBlock {
+    margin: 0;
+  }
+}

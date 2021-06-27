@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+.CustomerDetailsBlockSelector p {
+  font-size: 24px;
+  padding: 14px 10px;
+}
+
+.CustomerDetailsBlockSelector h2 {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.CustomerDetailsBlockSelector .formDetails {
+  display: flex;
+  flex-wrap: wrap;
+  width: "25ch";
+  margin: 16px 10px;
+}
+
+.FooderForm_HalfField {
+  width: 50%;
+  display: inline-block;
+}
+
+.buttonStripe {
+  display: flex;
+  justify-content: center;
+}

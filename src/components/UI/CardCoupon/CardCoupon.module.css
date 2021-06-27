@@ -1,0 +1,28 @@
+.couponBody {
+  background-color: white;
+  border-radius: 22px;
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  height: 100px;
+}
+
+.couponDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.couponDetails label,
+.couponDetails input {
+  margin: auto 0.5rem;
+  font-weight: 700;
+}
+
+/* Desktops and laptops two ----------- */
+@media only screen and (max-width: 1024px) {
+  .couponBody {
+    width: 90%;
+    margin: 1.25rem auto;
+  }
+}

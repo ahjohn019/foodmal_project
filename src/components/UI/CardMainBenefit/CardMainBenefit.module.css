@@ -1,0 +1,36 @@
+.FoodMasterBlockSelectorTwo {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+
+.FoodMasterBenefitTitle {
+  text-align: center;
+}
+
+.FoodMasterBenefitTitle h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.FoodMasterDisplayContent {
+  position: relative;
+  line-height: 1.5;
+}
+
+.FoodFeaturesDesc,
+.FoodFeaturesDesc p {
+  margin: 2rem auto;
+}
+
+.FoodFeaturesDesc p {
+  text-align: center;
+  font-weight: 600;
+}
+
+.FoodMasterDisplayImage {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  z-index: 99;
+}

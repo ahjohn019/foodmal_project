@@ -1,0 +1,120 @@
+.CheckoutBlockSelector {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 22px;
+  padding: 2rem 3rem;
+  height: 100%;
+}
+
+.CheckoutBlockSelector h2,
+.fooderSubtotal {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.CheckoutBlockSelector:hover {
+  overflow-y: scroll;
+}
+
+.CheckoutBlockSelector li {
+  padding-left: 10%;
+} /*need change position on web*/
+
+.checkoutEditColumn {
+  display: inline-block;
+}
+
+.CheckoutNoOrder {
+  font-size: 16px;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.fooderBlockImg {
+  width: 100px;
+  margin: auto 0;
+}
+
+.fooderCheckoutImg {
+  width: 100%;
+}
+
+.fooderTotalItems {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Order Container */
+.orderContainer {
+  width: 100%;
+  margin: auto;
+  font-weight: bold;
+}
+.orderContainerList {
+  margin: 1.5rem 0;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 0.5rem;
+}
+
+.orderContainerDetails,
+.orderContainerSubDetails,
+.orderContainerSubtotal {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderContainerDetails {
+  margin: 0 3rem;
+  font-size: 0.9rem;
+}
+
+.orderContainerSubDetails {
+  color: rgb(173, 171, 171);
+}
+
+.orderContainerSubtotal {
+  justify-content: center;
+}
+
+.orderContainerSubtotal,
+.fooderSubtotal span {
+  margin-left: auto;
+}
+
+.fooderSubtotal {
+  width: 100%;
+  display: flex;
+}
+
+.orderRowRemarks {
+  font-weight: 400;
+}
+
+/* Desktops and laptops two ----------- */
+@media only screen and (max-width: 768px) {
+  .CheckoutBlockSelector {
+    width: 90%;
+    margin: 5rem auto 0;
+    font-size: 0.9rem;
+    padding: 1.25rem;
+    height: 100%;
+  }
+
+  .CheckoutBlockSelector:hover {
+    overflow: hidden;
+  }
+
+  .fooderBlockImg {
+    width: 30%;
+  }
+
+  .orderContainerDetails {
+    margin: 0 15px;
+    font-size: 0.9rem;
+  }
+}

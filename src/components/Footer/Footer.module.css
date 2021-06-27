@@ -1,0 +1,12 @@
+.Footer {
+  background-color: lightseagreen;
+  height: 60px;
+  z-index: 1;
+}
+
+.FooderText {
+  display: flex;
+  margin: 20px;
+  font-weight: 500;
+  justify-content: center;
+}

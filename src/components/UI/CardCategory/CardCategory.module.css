@@ -1,0 +1,63 @@
+.categoryBackground {
+  width: 80%;
+  margin: auto;
+}
+
+.cardCategoryGrid {
+  border: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  margin: 0 auto 20px auto;
+  height: auto;
+  padding: 0 1.5rem;
+}
+
+.cardCategoryGrid .cardCategoryList {
+  border: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  grid-area: photo photo photo;
+  position: relative;
+}
+
+.FoodCategory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.cardCategoryGrid .cardCategoryList:hover .FoodCategory {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cardCategoryGrid .cardCategoryList:hover .categoriesImg {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.categoriesImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+/* Mobile One----------- */
+@media only screen and (max-width: 1024px) {
+  /* Styles */
+  .categoryBackground {
+    width: 100%;
+    margin: 0;
+  }
+
+  .cardCategoryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

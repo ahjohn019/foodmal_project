@@ -1,0 +1,75 @@
+.cardBestSellerGrid {
+  background-color: #c0fefc;
+  text-align: center;
+  padding: 1.25rem 0;
+}
+
+.cardBestSellerItem {
+  width: 250px;
+  padding: 18px 16px;
+  margin: auto;
+  background-color: white;
+  border-radius: 22px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 350px;
+}
+
+.cardBestSellerContainer {
+  width: 70%;
+  margin: auto;
+}
+
+.cardBestSellerGrid h1 {
+  font-weight: 800;
+}
+
+.cardBestSellerItem h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1.25rem;
+  font-size: 16px;
+}
+
+.cardBestSellerItem p {
+  font-size: 12px;
+  padding: 0 20px;
+  color: gray;
+}
+
+.cardBestSellerItem .cardBestSellerPriceTag {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: auto 0;
+}
+
+.cardBestSellerImage {
+  width: 150px;
+  height: 100%;
+  border-radius: 22px;
+  object-fit: cover;
+  margin: auto;
+}
+
+/* .cardBestSellerItem .RedirectFoodIcon {
+  margin-left: auto;
+} */
+
+.cardBestSellerItem .RedirectFoodIcon:focus {
+  outline: none;
+}
+
+/* Mobile One----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  .cardBestSellerGrid h2 {
+    font-size: 22px;
+  }
+
+  .cardBestSellerItem,
+  .cardBestSellerContainer {
+    width: 90%;
+  }
+}

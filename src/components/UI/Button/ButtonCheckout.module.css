@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+.ButtonPurchase {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.ButtonPurchase:focus {
+  outline: none;
+}
+
+.PriceList {
+  display: inline;
+  font-weight: bold;
+}
+
+.ModalHeader {
+  background-color: lightseagreen;
+}
+
+.ModalContent p,
+.ModalContent li {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ModalFooter {
+  background-color: lightseagreen;
+}
+
+.ModalTitle {
+  font-size: xx-large;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .ButtonConfirmation {
+    padding-top: 5px;
+    width: 15%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .ButtonConfirmation {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ButtonConfirmation {
+    width: 20%;
+  }
+}

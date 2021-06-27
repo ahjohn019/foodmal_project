@@ -1,0 +1,23 @@
+.NavItem {
+  float: right;
+  margin-right: 30px;
+  transition: 0.3s ease;
+  opacity: 0.7;
+  color: black;
+  margin-top: 30px;
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 10%;
+  background-color: white;
+}
+
+.NavItem:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.NavItem:active {
+  cursor: pointer;
+  transform: scale(1, 1);
+  opacity: 1;
+}

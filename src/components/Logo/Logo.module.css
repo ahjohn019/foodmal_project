@@ -1,0 +1,17 @@
+.Logo {
+  /* margin-right:65%; */
+  float: left;
+  padding: 22px 18px;
+}
+
+.Logo img {
+  height: 45px;
+}
+
+/* Mobile Responsive ----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  .Logo img {
+    display: none;
+  }
+}

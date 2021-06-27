@@ -1,0 +1,26 @@
+.DrawerStylesFull {
+  width: "auto";
+}
+
+.DrawerStylesList {
+  width: 250px;
+}
+
+.DrawerIconStyle {
+  color: white;
+}
+
+.DrawerCategoryList {
+  padding-left: 30px;
+  font-weight: 400;
+  color: black;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Desktop Responsive ----------- */
+@media only screen and (min-width: 768px) {
+  .DrawerIconStyle {
+    display: none;
+  }
+}

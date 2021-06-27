@@ -1,0 +1,80 @@
+.cardTypeItem {
+  margin: 26px auto 10px auto;
+  width: 250px;
+  padding: 16px 14px;
+  height: 350px;
+  border-radius: 10%;
+  display: inline-block;
+  border: 1px solid lightgray;
+}
+
+.cardTypeItem h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 0 0;
+  font-size: 20px;
+}
+
+.cardTypeItem p {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardTypeItem .cardTypePriceTag {
+  display: inline;
+  font-size: 28px;
+  float: left;
+  font-weight: 700;
+}
+
+.cardTypeImage {
+  width: 100%;
+  height: 50%;
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px #777;
+}
+
+.cardTypeGrid {
+  max-width: 80%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sortGridType {
+  display: flex;
+  justify-content: center;
+}
+
+.cardTypeItem .FooderTypeIcon {
+  float: right;
+}
+
+/* Mobile ----------- */
+@media only screen and (max-width: 768px) {
+  .cardTypeItem {
+    width: 45%;
+    height: 50%;
+  }
+
+  .cardTypeItem h3 {
+    font-size: 14px;
+  }
+
+  .cardTypeImage {
+    height: 45%;
+  }
+
+  .cardTypeItem .cardTypePriceTag {
+    font-size: 18px;
+  }
+
+  .cardTypeItem .FooderTypeIcon {
+    padding: 0;
+  }
+}

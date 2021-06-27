@@ -1,0 +1,27 @@
+.SearchBar{
+    /* padding-left: 20%;
+    padding-right: 30%; */
+    float:right;
+    margin-top: 20px;
+    padding-right:50px;
+}
+
+.SearchBar .SearchBarDetails {
+    width:100%;
+    border:0;
+    background-color: #4DC1BB;
+    box-shadow: 0 8px 6px -6px black;
+    border-radius: 4px;
+    font-size:16px;
+    background-image: url('../../../assets/images/searchicons.png');
+    background-size: 15px 15px;
+    background-position: 15px 17px;
+    background-repeat: no-repeat;
+    padding: 12px 10px 12px 40px;
+}
+
+
+.SearchBarDetails:hover {
+    background-color: #8DD7D4;
+}
+

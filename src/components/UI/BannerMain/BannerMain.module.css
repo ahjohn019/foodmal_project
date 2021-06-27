@@ -1,0 +1,69 @@
+.FooderBanner {
+  background-image: url("../../../assets/images/fooder_bannerv2.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  position: relative;
+  display: flex;
+}
+
+.FooderBannerText {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  animation: fadeIn ease 3s;
+  color: #494747;
+}
+
+.FooderBannerLogoOne {
+  margin: auto;
+}
+
+.FooderLogoContainer {
+  width: 500px;
+}
+
+.FooderBannerText h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  .FooderBanner {
+    height: 350px;
+  }
+  .FooderBannerText h2 {
+    font-size: 2.5rem;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .FooderBannerText {
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .FooderBannerLogoOne {
+    display: none;
+  }
+  .FooderBannerButton {
+    margin: 0 auto;
+  }
+}

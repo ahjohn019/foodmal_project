@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+.PaymentMainBlock {
+  border-radius: 22px;
+  margin: 5rem 20px;
+  padding: 2rem;
+  background-color: white;
+  width: 30%;
+}
+
+.CheckoutBody {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  background-color: #f3f5f9;
+}
+
+.CheckoutContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 5rem 0;
+}
+
+.PaymentCardContainer {
+  display: flex;
+}
+
+.PaymentCardContainer img {
+  margin: 0 5px;
+}
+
+/* Desktops and laptops two ----------- */
+@media only screen and (max-width: 1024px) {
+  .CheckoutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .PaymentMainBlock {
+    width: 90%;
+    margin: 10px auto;
+    padding: 1.25rem;
+  }
+
+  .CheckoutBody {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f5f9;
+  }
+
+  .fooderCheckoutDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 0 18px;
+  }
+
+  .fooderBlockImg {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+
+  .fooderTotalItems {
+    margin: auto;
+  }
+}

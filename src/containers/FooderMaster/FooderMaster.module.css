@@ -1,0 +1,18 @@
+.FoodMasterBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+.headlineMaster {
+  text-transform: uppercase;
+  margin: 1.5rem;
+}
+/*Mobile*/
+@media only screen and (max-width: 768px) {
+  .headlineMaster {
+    text-align: center;
+  }
+}

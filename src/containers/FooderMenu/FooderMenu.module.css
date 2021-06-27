@@ -1,0 +1,129 @@
+.BlockContent {
+  height: 100%;
+  margin: 5rem 0;
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.BlockTitle,
+.BlockImage {
+  box-shadow: 3px 3px 3px 3px #ccc;
+}
+
+.BlockTitle {
+  border: 1px solid;
+  width: 60%;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+}
+
+.BlockImage {
+  width: 100%;
+  border-radius: 22px;
+  position: relative;
+}
+
+.BlockSelector {
+  width: 550px;
+  margin: 0 auto 10px auto;
+  border: 1px solid lightgray;
+  padding: 16px 14px;
+  border-radius: 22px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.BlockSelector .ButtonQuantityText h2 {
+  padding: 0;
+}
+
+.BlockWarningMessage {
+  text-align: center;
+}
+
+.BlockSelector button:focus {
+  outline: none;
+}
+
+.BlockSelector .ButtonQuantityText {
+  display: inline-block;
+  margin: 0 40px;
+}
+
+.BlockSelector .SpecialInstructions {
+  border: 0;
+  border-radius: 2%;
+  display: flex;
+  margin: 5px;
+}
+
+.BlockSelector .BlockAdjustSelector {
+  display: flex;
+  justify-content: center;
+}
+
+.BlockLabelPrice {
+  float: right;
+  margin: 12px 0;
+}
+
+.CharLeft {
+  color: grey;
+  font-size: small;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.BlockSelectionDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.BlockImagePosition {
+  width: 350px;
+}
+
+/*checkbox list*/
+.checkboxOne input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.checkboxOne label {
+  font-size: 16px;
+}
+
+.checkboxOne p {
+  display: inline;
+  font-weight: bold;
+}
+
+/* Mobile Responsive ----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  .BlockContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .BlockImage {
+    right: 0;
+    width: 100%;
+  }
+
+  .BlockImagePosition {
+    width: 150px;
+    margin: auto;
+  }
+
+  .BlockSelector {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .BlockSelectionDetails {
+    margin: 0 1.25rem;
+  }
+}
