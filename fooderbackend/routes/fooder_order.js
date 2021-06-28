@@ -49,7 +49,6 @@ fooder_orderrouter.route('/order/add').post(auth,(req,res)=>{
                     if(err){
                         console.log(err);
                     } else{
-                        console.log(order.order_price);
                         FooderOrderList.findOneAndUpdate({_refprofile:result._id, order_status:"Pending"},
                             {$addToSet:{order_list:order._id}},
                             {upsert: true,new:true},function(err,orderresult){
@@ -59,15 +58,7 @@ fooder_orderrouter.route('/order/add').post(auth,(req,res)=>{
                                     FooderOrder.findOneAndUpdate(
                                         {_refprofile:result._id,_id:order._id,order_status:"Pending"},
                                         {$push:{_orderlist:orderresult._id}}
-                                        ,function(err,result){
-                                            if(err){
-                                                console.log(err);
-                                            } else{
-                                                console.log(result);
-                                            }
-                                        }
-                                    )
-
+                                    );
                                 }
                             })
                     }

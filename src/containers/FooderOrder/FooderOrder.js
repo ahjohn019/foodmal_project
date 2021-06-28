@@ -126,11 +126,13 @@ class Checkout extends Component {
         let _gettotalprice;
         let filterSuccess = this.state.fooder_order.filter(fsuccess => fsuccess.order_status !== 'Success')
         let filterSuccessLength;
+        let _converttotalprice;
 
         //old db count cart        
         if (token) {
             //db get total pricetest
-            _gettotalprice = filterSuccess.map(forder => fooder_profileid === forder._refprofile[0] ? forder.order_price : null).reduce((sum, index) => sum + index, 0);
+            _converttotalprice = filterSuccess.map(forder => fooder_profileid === forder._refprofile[0] ? forder.order_price : null).reduce((sum, index) => sum + index, 0);
+            _gettotalprice = _converttotalprice.toFixed(2);
             //Order Status != "Success" => zero
             var fooderOrder_count = 0;
             var fooderOrder_init = [];
@@ -156,17 +158,18 @@ class Checkout extends Component {
         let convertCouponInfo
         let _gettotalprice = getTotalPrice._gettotalprice
         let _getDiscountInfo
+        let _convertDiscountInfo
 
         if (document.cookie.indexOf('couponDiscount') > -1 ) {
             getCouponInfo = document.cookie.split('; ').find(row => row.startsWith('coupon=')).split('=')[1];
             convertCouponInfo = JSON.parse(getCouponInfo)
             if(convertCouponInfo.cpn_type === 'discount'){
-                _getDiscountInfo = (100-convertCouponInfo.cpn_value)/100 * _gettotalprice
+                _convertDiscountInfo = (100-convertCouponInfo.cpn_value)/100 * _gettotalprice
             }
             if(convertCouponInfo.cpn_type === 'fixed'){
-                _getDiscountInfo = _gettotalprice - convertCouponInfo.cpn_value
+                _convertDiscountInfo = _gettotalprice - convertCouponInfo.cpn_value
             }
-
+            _getDiscountInfo = _convertDiscountInfo.toFixed(2)
         } else {
             _getDiscountInfo = _gettotalprice
         }
@@ -200,9 +203,8 @@ class Checkout extends Component {
                             _filterSuccessLength={_getSubtotal.filterSuccessLength}
                             _deleteCheckoutHandler={this.deleteCheckoutHandler}
                             _totalPrice={_getCouponInfo._getDiscountInfo}
-                            // _getCouponInfo= {_getSubtotal.convertCouponInfo}
                         />
-                        <CouponComponent _totalPrice={_getCouponInfo._getDiscountInfo} _getCouponDetails={_getCouponInfo}/>
+                        <CouponComponent _totalPrice={_getCouponInfo._getDiscountInfo} />
                     </div>
                     <div className={classes.PaymentMainBlock}>
                         <Payment

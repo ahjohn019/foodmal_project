@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import classes from '../CardCoupon/CardCoupon.module.css';
 import axios from 'axios';
 
-const CouponComponent = (props) => {
 
+
+function CouponComponent(props){
     const [couponid, setCouponId] = useState([]);
     const [couponName, setCouponName] = useState("");
-
 
     useEffect(() => {
         axios.get('/api/fooder_coupon')
@@ -20,7 +20,7 @@ const CouponComponent = (props) => {
             })
     }, [couponName]);
 
-    
+  
     if(couponid.length !== 0){
         document.cookie = "coupon="+JSON.stringify(couponid);
         const getCouponValue = document.cookie.split('; ').find(row => row.startsWith('coupon=')).split('=')[1];
@@ -30,33 +30,36 @@ const CouponComponent = (props) => {
             coupon_discount =  (100-convertCoupon.cpn_value)/100 * props._totalPrice
         }
         if(convertCoupon.cpn_type === 'fixed'){
-            coupon_discount = props._totalPrice -convertCoupon.cpn_value
+            coupon_discount = props._totalPrice - convertCoupon.cpn_value
         }
         document.cookie = "couponDiscount=" + coupon_discount;
     }
+
     
     const cancelCoupon = () => {
         const clearCoupon = ['couponDiscount','coupon']
         for(var i in clearCoupon){
             document.cookie = clearCoupon[i] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         }
+        return document.cookie
     }
     
     return (
         <div className={classes.couponBody}>
             <form className={classes.couponDetails}>
                 <label>Discount Code</label>
-                <div className={classes.couponDetailsInput}>
+                <div className={classes.couponDetailsInput}>  
                     <div style={{display: 'flex'}}>
-                    <input type="text" value={couponName} onChange={event => setCouponName(event.target.value)} />
-                    {
-                        document.cookie.indexOf('coupon') > -1 ? 
-                        <div>
-                            <input type="submit" value="Submit"  />
-                            <input type="submit" value="Cancel" onClick={cancelCoupon}/>
-                        </div>
-                        : null
-                    }
+                        <input type="text" value={couponName} onChange={event => setCouponName(event.target.value)} style={{width:'100%'}} />
+                        {
+                            document.cookie.indexOf('coupon') > -1 ? 
+                            <div style={{display: 'flex'}}>
+                                <input type="submit" value="Submit" />
+                                <input type="submit" value="Cancel" onClick={cancelCoupon}/>
+                                {/* <span>{couponid.cpn_name}</span> */}
+                            </div>
+                            : null
+                        }
                     </div>
                 </div>
             </form>
@@ -64,4 +67,5 @@ const CouponComponent = (props) => {
     );
 };
 
-export default CouponComponent;
+
+export default CouponComponent ;
